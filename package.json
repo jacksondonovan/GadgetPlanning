@@ -1,0 +1,26 @@
+{
+  "name": "gadgetplanning",
+  "version": "1.0.0",
+  "description": "Building generic company website template",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksondonovan/GadgetPlanning.git"
+  },
+  "author": "Jackson Donovan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacksondonovan/GadgetPlanning/issues"
+  },
+  "homepage": "https://github.com/jacksondonovan/GadgetPlanning#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "path": "^0.12.7"
+  }
+}
