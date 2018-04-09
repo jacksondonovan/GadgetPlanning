@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/product.css">
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -91,29 +92,40 @@
 
   </div>
 </div>
-<div class="container">
-  <h2>Gestr</h2>
-  <h4>Then and Now</h4>
-  <br>
+<br>
+<div class="container bg-grey">
+  <div class="text-center">
+    <h2>Gestr</h2>
+    <h4>Then and Now</h4>
+  </div>
+
+  <br><br>
   <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
+    <div class="col-sm-4 text-center">
+      <span class="glyphicon glyphicon-off logo-small text-center"></span>
       <h4>Prototype</h4>
       <p>With the help of multiple organizations and a combined 5000 man hours, the Gestr became viable in 2017</p>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
+    <div class="col-sm-4 text-center">
+      <span class="glyphicon glyphicon-heart logo-small text-center"></span>
       <h4>Market</h4>
       <p>May 2018, the Gestr is released through Indiegogo and Gadgettronix Website to be sold in USA</p>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
+    <div class="col-sm-4 text-center">
+      <span class="glyphicon glyphicon-lock logo-small text-center"></span>
       <h4>Community Ahead</h4>
       <p>After early adoption, the community of smart wears will help make life safer for all.</p>
     </div>
   </div>
-
+  <br><br>
 </div>
+
+<div class="container" style="height:150px;">
+  <div class="row col-sm-12">
+
+  </div>
+</div>
+
 
 
 <div id="contact" class="container-fluid bg-grey">
@@ -143,7 +155,41 @@
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
+      // Store hash
+      var hash = this.hash;
 
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+  })
+</script>
 </body>
 </html>
