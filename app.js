@@ -18,6 +18,26 @@ app.get('/product',(req,res)=>{
   res.render('product')
 });
 
+app.get('/technology',(req,res)=>{
+  res.render('technology')
+});
+
+app.get('/indiegogo',(req,res)=>{
+  res.render('indiegogo')
+});
+
+app.get('/subscribe',(req,res)=>{
+  res.render('subscribe')
+});
+
+app.get('/about',(req,res)=>{
+  res.render('about')
+});
+
+app.get('/faq',(req,res)=>{
+  res.render('faq')
+});
+
 app.listen(port,(req,res)=>{
   console.log('listening on port ' , port);
 })
